@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registration Page</title>
+        <link href="style.css" rel="stylesheet"> 
+    </head>
+    <body>
+    <div class="ret-01">
+        <!-- Checkbox hack for Start Menu -->
+        <input type="checkbox" id="ret-01-start" class="ret-01__chk">
+
+        <!-- Desktop Content Area -->
+        <div class="ret-01__desktop" style="bottom: 42px; overflow-y: auto;">
+            
+            <!-- Main Registration Window -->
+            <div class="ret-01__win" style="position: relative; top: 0; left: 0; width: 100%; max-width: 600px; margin: 0 auto 30px auto;">
+                <div class="ret-01__title">
+                    <span class="ret-01__tl"><b>📝</b> FAKEWD2026 — Registration Wizard</span>
+                    <span class="ret-01__btns">
+                        <label class="ret-01__tb" for="ret-01-start">_</label>
+                        <span class="ret-01__tb">▢</span>
+                        <span class="ret-01__tb">✕</span>
+                    </span>
+                </div>
+                <div class="ret-01__menu">
+                    <span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>H</u>elp</span>
+                </div>
+                <div class="ret-01__body">
+                    <!-- Nav / Header Section -->
+                    <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h2><a href="index.html" style="color:black; text-decoration: none;">FAKEWD2026</a></h2>
+                        <div style="display: flex; gap: 8px;">
+                            <a href="register.html"><span class="ret-01__push ret-01__push--def">Register</span></a>
+                            <a href="details.html"><span class="ret-01__push">Details</span></a>
+                        </div>
+                    </nav>
+                    <h1 style="font-family: 'Pixelify Sans'; font-size: 22px; margin-bottom: 15px;">Conference Registration</h1>
+                    
+                    <form action="/submit_form" method="POST">
+                        <div class="ret-01__inset" style="padding: 16px; margin-top: 0;">
+                            
+                            <div style="margin-bottom: 12px;">
+                                <label for="fname" style="display: block; margin-bottom: 4px;">First Name:</label>
+                                <input type="text" id="fname" name="fname" required style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
+                            </div>
+
+                            <div style="margin-bottom: 12px;">
+                                <label for="lname" style="display: block; margin-bottom: 4px;">Last Name:</label>
+                                <input type="text" id="lname" name="lname" required style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
+                            </div>
+
+                            <div style="margin-bottom: 12px;">
+                                <label for="email" style="display: block; margin-bottom: 4px;">Email:</label>
+                                <input type="text" id="email" name="email" required style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
+                            </div>
+
+                            <div style="margin-bottom: 12px;">
+                                <label for="password" style="display: block; margin-bottom: 4px;">Password:</label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    minlength="7"
+                                    maxlength="12"
+                                    pattern="(?=.*\d)[a-zA-Z0-9]{7,12}"  
+                                    title="Password must contain 7-12 letters with at least one number" 
+                                    required
+                                    style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
+                            </div>
+
+                            <div style="margin-bottom: 12px;">
+                                <label for="confirm_password" style="display: block; margin-bottom: 4px;">Confirm Password:</label>
+                                <input type="password" id="confirm_password" name="confirm_password" required style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
+                            </div>
+
+                            <div style="margin-bottom: 12px;">
+                                <label style="display: block; margin-bottom: 4px;">Research Student:</label>
+                                <div style="display: flex; gap: 15px; align-items: center;">
+                                    <div>
+                                        <input type="radio" id="yes" name="research_student" value="yes">
+                                        <label for="yes">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="no" name="research_student" value="no">
+                                        <label for="no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 15px; display: flex; gap: 8px; align-items: flex-start;">
+                                <input type="checkbox" id="terms_and_conditions_check_box" name="terms_and_conditions_check_box" value="accepted" style="margin-top: 4px;">
+                                <label for="terms_and_conditions_check_box" style="font-size: 16px; line-height: 1.2;">I acknowledge that I have read and understand the terms and conditions</label>
+                            </div>
+
+                        </div>
+
+                        <div class="ret-01__row">
+                            <button type="submit" class="ret-01__push ret-01__push--def" style="background: var(--gray); border: 2px solid; border-color: var(--white) var(--darker) var(--darker) var(--white);">Submit</button>
+                            <a href="index.html" style="text-decoration: none; color: inherit;"><span class="ret-01__push">Cancel</span></a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div class="ret-01__startmenu">
+            <div class="ret-01__spine">Codefronts&nbsp;95</div>
+            <div class="ret-01__slist">
+                <div class="ret-01__sitem"><i>📑</i>Programs</div>
+                <div class="ret-01__sitem"><i>📂</i>Documents</div>
+                <div class="ret-01__sitem"><i>⚙️</i>Settings</div>
+                <div class="ret-01__sitem"><i>🔍</i>Find</div>
+                <div class="ret-01__sitem"><i>❓</i>Help</div>
+                <div class="ret-01__sep"></div>
+                <div class="ret-01__sitem"><i>🔌</i>Shut Down…</div>
+            </div>
+        </div>
+
+        <!-- Taskbar -->
+        <div class="ret-01__taskbar">
+            <label class="ret-01__start" for="ret-01-start"><i>W</i>Start</label>
+            <div class="ret-01__tasks">
+                <div class="ret-01__task ret-01__task--active">📝 Registration</div>
+            </div>
+            <div class="ret-01__tray">🔊 📅 12:00 PM</div>
+        </div>
+
+    </div>
+    </body>
+</html>
