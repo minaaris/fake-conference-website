@@ -417,3 +417,13 @@
     transition: none;
   }
 }
+
+.input {
+  width: 100%;
+  padding: 4px; 
+  border: 2px solid; 
+  border-color: var(--darker) var(--white) var(--white) var(--darker); 
+  background: var(--white); 
+  font-family: 'VT323', monospace; 
+  font-size: 18px;
+}

@@ -42,66 +42,31 @@
                     </nav>
                     <h1 style="font-family: 'Pixelify Sans'; font-size: 22px; margin-bottom: 15px;">Conference Registration</h1>
                     
-                    <form id="RegistrationForm">
+                    <form id="RegistrationForm" novalidate>
                         <div class="ret-01__inset" style="padding: 16px; margin-top: 0;">
                             
                             <div style="margin-bottom: 12px;">
                                 <label for="fname" style="display: block; margin-bottom: 4px;">First Name:</label>
-                                <input type="text" id="fname" name="fname" required style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
+                                <input type="text" id="firstName" class="input" placeholder="Bruce" required>
                             </div>
 
                             <div style="margin-bottom: 12px;">
                                 <label for="lname" style="display: block; margin-bottom: 4px;">Last Name:</label>
-                                <input type="text" id="lname" name="lname" required style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
+                                <input type="text" id="lastName" class="input" placeholder="Wayne" required>
                             </div>
 
                             <div style="margin-bottom: 12px;">
                                 <label for="email" style="display: block; margin-bottom: 4px;">Email:</label>
-                                <input type="text" id="email" name="email" required style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
-                            </div>
-
-                            <div style="margin-bottom: 12px;">
-                                <label for="password" style="display: block; margin-bottom: 4px;">Password:</label>
-                                <input 
-                                    type="password" 
-                                    id="password" 
-                                    name="password" 
-                                    minlength="7"
-                                    maxlength="12"
-                                    pattern="(?=.*\d)[a-zA-Z0-9]{7,12}"  
-                                    title="Password must contain 7-12 letters with at least one number" 
-                                    required
-                                    style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
-                            </div>
-
-                            <div style="margin-bottom: 12px;">
-                                <label for="confirm_password" style="display: block; margin-bottom: 4px;">Confirm Password:</label>
-                                <input type="password" id="confirm_password" name="confirm_password" required style="width: 100%; padding: 4px; border: 2px solid; border-color: var(--darker) var(--white) var(--white) var(--darker); background: var(--white); font-family: 'VT323', monospace; font-size: 18px;">
-                            </div>
-
-                            <div style="margin-bottom: 12px;">
-                                <label style="display: block; margin-bottom: 4px;">Research Student:</label>
-                                <div style="display: flex; gap: 15px; align-items: center;">
-                                    <div>
-                                        <input type="radio" id="yes" name="research_student" value="yes">
-                                        <label for="yes">Yes</label>
-                                    </div>
-                                    <div>
-                                        <input type="radio" id="no" name="research_student" value="no">
-                                        <label for="no">No</label>
-                                    </div>
-                                </div>
+                                <input type="email" id="email" class="input" placeholder="your@email.com" required>
                             </div>
 
                             <div style="margin-top: 15px; display: flex; gap: 8px; align-items: flex-start;">
-                                <input type="checkbox" id="terms_and_conditions_check_box" 
-                                name="terms_and_conditions_check_box" value="accepted" style="margin-top: 4px;">
-                                <label for="terms_and_conditions_check_box" 
-                                    style="font-size: 16px; line-height: 1.2;">I acknowledge that I have read and understand 
-                                    the terms and conditions
+                                <input type="checkbox" id="termsConditions" value="accepted" style="margin-top: 4px;">
+                                <label for="termsConditions" style="font-size: 16px; line-height: 1.2;">
+                                    I acknowledge that I have read and understand the <a href="#">terms and conditions</a>
                                 </label>
                             </div>
-
+                            <p id="errorText" style="color:red"></p>
                         </div>
 
                         <div class="ret-01__row">
