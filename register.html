@@ -42,7 +42,7 @@
                     </nav>
                     <h1 style="font-family: 'Pixelify Sans'; font-size: 22px; margin-bottom: 15px;">Conference Registration</h1>
                     
-                    <form action="/index.html">
+                    <form id="RegistrationForm">
                         <div class="ret-01__inset" style="padding: 16px; margin-top: 0;">
                             
                             <div style="margin-bottom: 12px;">
@@ -94,15 +94,23 @@
                             </div>
 
                             <div style="margin-top: 15px; display: flex; gap: 8px; align-items: flex-start;">
-                                <input type="checkbox" id="terms_and_conditions_check_box" name="terms_and_conditions_check_box" value="accepted" style="margin-top: 4px;">
-                                <label for="terms_and_conditions_check_box" style="font-size: 16px; line-height: 1.2;">I acknowledge that I have read and understand the terms and conditions</label>
+                                <input type="checkbox" id="terms_and_conditions_check_box" 
+                                name="terms_and_conditions_check_box" value="accepted" style="margin-top: 4px;">
+                                <label for="terms_and_conditions_check_box" 
+                                    style="font-size: 16px; line-height: 1.2;">I acknowledge that I have read and understand 
+                                    the terms and conditions
+                                </label>
                             </div>
 
                         </div>
 
                         <div class="ret-01__row">
-                            <button type="submit" class="ret-01__push ret-01__push--def" style="background: var(--gray); border: 2px solid; border-color: var(--white) var(--darker) var(--darker) var(--white);">Submit</button>
-                            <a href="index.html" style="text-decoration: none; color: inherit;"><span class="ret-01__push">Cancel</span></a>
+                            <button id="submitButton" class="ret-01__push ret-01__push--def">
+                                Submit
+                            </button>
+                            <button id="cancelButton" class="ret-01__push ret-01__push--def">
+                                Cancel
+                            </button>
                         </div>
                     </form>
 
@@ -133,6 +141,22 @@
             <div class="ret-01__tray">🔊 📅 12:00 PM</div>
         </div>
 
-    </div>
+        <div id="successModal" class="ret-01__win" style="display: none; position: relative; top: 0; left: 0; 
+            width: 100%; max-width: 300px; margin: 0 auto 30px auto;">
+            <div class="ret-01__title">
+                <span class="ret-01__tl"><b>📝</b> FAKEWD2026 — Registration Wizard</span>
+                <span class="ret-01__btns">
+                    <label class="ret-01__tb" for="ret-01-start">_</label>
+                    <span class="ret-01__tb">▢</span>
+                    <button id="closeButton" class="ret-01__tb">✕</button>
+                </span>
+            </div>
+            <div class="ret-01__menu">
+                <span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>H</u>elp</span>
+            </div>
+            <h1 style="font-family: 'Pixelify Sans'; font-size: 22px; margin-bottom: 15px;">Registration Successful</h1>
+        </div>
+
     </body>
+    <script src="register.js"></script>
 </html>
